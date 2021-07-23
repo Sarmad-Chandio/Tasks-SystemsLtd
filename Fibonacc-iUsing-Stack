@@ -1,0 +1,34 @@
+import java.util.Stack;
+
+public class FibonacciUsingStack{
+	//0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+	public static void fibonacciCreating(int size){
+		//creating stack
+		Stack<Integer> stack=new Stack<>();
+		
+		//entering two elements
+		stack.push(0);
+		stack.push(1);
+		
+		
+		for(int i=0;i<size;i++){
+			//using first and second element, for applying operation
+			int first=stack.pop();
+			int second=stack.pop();
+			
+			System.out.print(second+"   ");
+			//swaping
+			int nextTerm=first+second;
+			stack.push(first);
+			
+			stack.push(nextTerm);
+		}
+	}
+	public static void main(String [] args){
+		
+		//size of loop , how many elements should be prented?
+		FibonacciUsingStack.fibonacciCreating(10);
+		
+		
+	}
+}
