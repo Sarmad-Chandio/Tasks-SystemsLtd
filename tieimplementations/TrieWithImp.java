@@ -31,7 +31,7 @@ public class TrieWithImp {
 	    }
 	}
 	
-	void findPhrases(Node root, String textBody)
+	public void findPhrases(Node root, String textBody)
 	{
 	    // a pointer to traverse the trie without damaging
 	    // the original reference
